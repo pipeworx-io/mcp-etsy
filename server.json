@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.pipeworx-io/etsy",
+  "title": "Etsy",
+  "description": "Etsy MCP — public listing search via Etsy Open API v3 (api_key auth only)",
+  "version": "0.1.0",
+  "websiteUrl": "https://pipeworx.io/packs/etsy",
+  "repository": {
+    "url": "https://github.com/pipeworx-io/mcp-etsy",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://gateway.pipeworx.io/etsy/mcp"
+    }
+  ]
+}
