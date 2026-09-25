@@ -3,7 +3,7 @@
   "name": "io.github.pipeworx-io/etsy",
   "title": "Etsy",
   "description": "Etsy MCP — public listing search via Etsy Open API v3 (api_key auth only)",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "websiteUrl": "https://pipeworx.io/packs/etsy",
   "repository": {
     "url": "https://github.com/pipeworx-io/mcp-etsy",
