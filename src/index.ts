@@ -697,9 +697,15 @@ function collapse(s: string): string {
  * 2026-09-09 and 2026-09-13), so no probe run before activation can tell the
  * two header forms apart. So don't guess: send the keystring, and if Etsy
  * rejects it with a 403, retry once with the raw value exactly as the caller
- * supplied it. Whichever form is right, the first call after activation
+ * supplied it. Whichever form is right, the first call with an approved key
  * works, and the 90-day metrics say nobody has ever gotten a successful
  * response out of this pack to regress.
+ *
+ * BYO is the SETTLED posture (Bruce, 2026-10-02, fleet #2632: "stop-tracking").
+ * Pipeworx will not register or front a platform Etsy app; the never-set
+ * PLATFORM_ETSY_KEY declaration was dropped from the gateway manifest (the
+ * vendor audit requires that for a byok_permanent intent) and is not
+ * re-probed. Decision record: scripts/vendors/intent.json → etsy.
  *
  * This pack returns Etsy's response JSON close to verbatim (count + results)
  * rather than re-mapping fields, since the exact Listing resource shape is

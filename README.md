@@ -3,7 +3,7 @@
 Search active Etsy listings via the Etsy Open API v3 — scoped to the three
 endpoints that authenticate with just an API key (no OAuth user token).
 
-Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 1683+ live data sources.
+Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 1688+ live data sources. This is an independent, unofficial integration — not affiliated with, endorsed by, or published by the upstream provider.
 
 ## Tools
 
@@ -30,11 +30,17 @@ Etsy's manual commercial-review flow — out of scope for this pack. If Etsy's
 review later grants broader access, extend this pack rather than building a
 second one.
 
-Registering an Etsy developer account requires signing in with (or creating)
-an Etsy account and a password — a human step this pack's author cannot
-perform on Bruce's behalf. See the open Needs Bruce item for platform-key
-registration; this pack ships BYOK-gated in the meantime and its own live
-call has not yet been verified against a real key.
+BYO is the settled posture, not a stopgap: Bruce ruled `stop-tracking` on
+2026-10-02 (fleet #2632) — Pipeworx will not register or front a platform
+Etsy app; the never-set `PLATFORM_ETSY_KEY` declaration is gone from the
+gateway manifest and nobody re-probes it any more.
+Registering an Etsy app requires signing into an Etsy account with a password
+and then Etsy's manual "Personal Approval", and a pending app's 403 is
+byte-identical to a fabricated key's 403, so there was no probe that could
+ever end the wait. A keyless call refuses with "requires an API key" and
+points at the registration URL. Note **this pack's live call has not been
+verified against an approved key** — the first caller with a real, approved
+keystring exercises it live.
 
 ## Data sources
 
@@ -104,7 +110,7 @@ directly, instead of just this one's:
 }
 ```
 
-Both URLs reach the same gateway and the same 1683+ data sources. The
+Both URLs reach the same gateway and the same 1688+ data sources. The
 only difference is which pack's tools are listed **directly**; `ask_pipeworx`
 reaches all of them from either one.
 
