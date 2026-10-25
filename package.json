@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-etsy",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Etsy MCP — public listing search via Etsy Open API v3 (api_key auth only)",
   "type": "module",
   "main": "src/index.ts",
@@ -26,7 +26,7 @@
     "@cloudflare/workers-types": "^4.20260405.1"
   },
   "pipeworx": {
-    "sourceHash": "v1-a9fbf00ffd895ab15753d1176af35058eeecfea7d25f7d343d52a635bcb61ad3",
-    "sourceCommit": "712a5e0171ea24483214329d0cd7efdfd9b80352"
+    "sourceHash": "v1-8691d1d16c34a508e1074b157cd43d89b92011975484ce6670a73d63d50bf899",
+    "sourceCommit": "722087a9bda73f85942e8f6bbfd598544cb0d490"
   }
 }
